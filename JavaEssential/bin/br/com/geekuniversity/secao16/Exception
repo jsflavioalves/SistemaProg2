@@ -1,0 +1,19 @@
+Quando falamos em exceção no Java, a gente tem que compreender:
+
+Existem dois grupos de exceções:
+Checked Exceptions: (Exceções Checadas) - menos perigosas
+Exception
+IOException
+SQLException
+
+As exceções do tipo "checadas" fazem com que o programa não seja 
+executado até que a determinada exceção seja tratada.
+
+Unchecked Exception: (Exceções não Checadas) - mais perigosas
+RunTimeException
+NullPointerException
+ArrayOutofBondsException
+
+As exceções do tipo "não checadas" só acontecem durante a execução do
+programa e desta forma não temos como saber, em grande parte dos casos
+onde ele poderá ocorrer.
