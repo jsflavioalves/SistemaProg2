@@ -90,4 +90,17 @@ public class contabancariaDAO {
 		return conta;
 		
 	}
+	
+	public void atualizar(contabancaria Contabancaria) {
+		String sql = "update contabancaria set situacao = ? where nroconta =" + Contabancaria.getNroconta();
+		try {
+			PreparedStatement atualizacao = connection.prepareStatement(sql);
+			atualizacao.setInt(1, Contabancaria.getSituacao());
+			atualizacao.execute();
+			connection.commit();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
 }

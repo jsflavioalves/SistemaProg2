@@ -48,4 +48,17 @@ public class TesteBancoJdbc {
 		}
 		
 	}
+	
+	@Test
+	public void initAtualizar() {
+		contabancariaDAO dao = new contabancariaDAO();
+		try {
+			contabancaria objetobanco = dao.buscar(1010);
+			objetobanco.setSituacao(90);
+			dao.atualizar(objetobanco);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
 }
